@@ -33,7 +33,7 @@ YouTubePlayerView youTubePlayerview;
     public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
 
         if(youTubeInitializationResult.isUserRecoverableError()){
-            youTubeInitializationResult.getErrorDialog(this,1);
+            youTubeInitializationResult.getErrorDialog(this,1).show();
         }else{
             Toast.makeText(this, "There is error in Initialization of Player: "+youTubeInitializationResult.toString(), Toast.LENGTH_SHORT).show();
         }
